@@ -1,0 +1,46 @@
+*{box-sizing:border-box}
+:root{font-family:"Vazirmatn",sans-serif;color:#355675;background:#edf7ff}
+body{margin:0;min-height:100vh;overflow-x:hidden;background:linear-gradient(160deg,#f7fbff 0%,#e9f5ff 52%,#dceeff 100%)}
+.sky-glow{position:fixed;inset:auto -15vw -35vw auto;width:75vw;height:75vw;border-radius:50%;background:#c7e4ff;filter:blur(70px);opacity:.45;pointer-events:none}
+.topbar{position:relative;z-index:1;max-width:1000px;margin:auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:#4b83b4;text-decoration:none;letter-spacing:.2px}
+.brand span{direction:ltr;display:inline-block}
+.admin-link{font-size:13px;color:#648caf;text-decoration:none;border:1px solid #c9e0f3;border-radius:30px;padding:8px 14px;background:#ffffff80}
+main{position:relative;z-index:1;max-width:760px;margin:20px auto 70px;padding:0 20px}
+.hero{text-align:center;padding:25px 0}
+.moon{font-size:66px;line-height:1;color:#80b2dc;text-shadow:0 0 30px #b5d9f5;margin:12px 0}
+.stars{color:#8bb7dc;font-size:18px;letter-spacing:4px;margin:8px 0 25px}
+.eyebrow{font-size:10px;letter-spacing:3px;color:#82a9ca;font-weight:700;direction:ltr}
+h1{font-size:clamp(27px,5vw,40px);margin:8px 0;color:#477da9}
+.intro{color:#7796b2;line-height:2;margin:8px auto 25px;max-width:540px;font-size:14px}
+.wish-card{max-width:570px;margin:25px auto 0;text-align:right;background:#ffffffd9;border:1px solid #d7e9f8;border-radius:24px;padding:27px;box-shadow:0 18px 55px #8bb9dc25}
+label{display:block;font-size:13px;font-weight:600;color:#557c9e;margin:15px 0 8px}
+input,textarea{width:100%;border:1px solid #d7e7f4;background:#f8fbff;border-radius:13px;padding:13px 14px;font:inherit;font-size:14px;color:#355675;outline:none;transition:.2s}
+input:focus,textarea:focus{border-color:#8bb9df;box-shadow:0 0 0 3px #d9edff}
+textarea{resize:vertical;min-height:130px;line-height:1.9}
+.form-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px}
+.form-bottom small,.privacy-note{font-size:11px;color:#8ca8c0}
+button{font:inherit;border:0;border-radius:30px;background:linear-gradient(120deg,#86b9e2,#659bc9);color:white;padding:12px 22px;cursor:pointer;box-shadow:0 7px 18px #79aeda35;transition:transform .2s,opacity .2s}
+button:hover{transform:translateY(-1px)}
+button:disabled{opacity:.6;cursor:wait;transform:none}
+.status{min-height:20px;font-size:12px;color:#638eb2;margin:12px 0 0;line-height:1.8}
+.privacy-note{margin-top:20px}
+footer{text-align:center;color:#8ba9c2;font-size:11px;padding:25px 15px 35px;position:relative}
+footer span{color:#79a9d2}
+.hidden{display:none!important}
+.admin-panel{padding-top:30px}
+.admin-heading{text-align:center}
+.login-card{max-width:430px}
+.login-card h2{margin:0 0 15px;color:#527fa5;font-size:19px}
+.login-card button{width:100%;margin-top:18px}
+.wishes-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:35px 0 12px}
+.wishes-toolbar h2{font-size:19px;color:#527fa5}
+.count{display:inline-grid;place-items:center;background:#dceeff;color:#5787b0;border-radius:20px;min-width:28px;height:28px;font-size:12px}
+.toolbar-actions{display:flex;gap:8px}
+.secondary-button{background:#fff;color:#638eb2;border:1px solid #d6e8f6;box-shadow:none;padding:9px 14px;font-size:12px}
+.wishes-list{display:grid;gap:13px;margin-top:18px}
+.wish-item{background:#ffffffdf;border:1px solid #dcebf7;border-radius:18px;padding:18px 20px;box-shadow:0 8px 24px #8bb9dc18}
+.wish-item p{white-space:pre-wrap;line-height:2;margin:0 0 12px;color:#456b8b;font-size:14px;overflow-wrap:anywhere}
+.wish-meta{display:flex;justify-content:space-between;gap:10px;color:#91aabe;font-size:11px}
+.empty-state{text-align:center;color:#86a4bd;padding:35px 10px;background:#ffffff80;border-radius:18px}
+@media(max-width:520px){.topbar{padding:17px}.wish-card{padding:20px 17px}.form-bottom{align-items:stretch;flex-direction:column}.form-bottom button{width:100%}.wishes-toolbar{align-items:flex-start;flex-direction:column}.toolbar-actions{width:100%}.toolbar-actions button{flex:1}}

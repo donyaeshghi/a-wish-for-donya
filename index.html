@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf6ff">
+  <title>A Wish for Donya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="sky-glow"></div>
+  <header class="topbar">
+    <a class="brand" href="./">☾ <span>A Wish for Donya</span></a>
+    <a class="admin-link" href="#admin">ورود دونیا</a>
+  </header>
+
+  <main>
+    <section id="guest-view" class="hero">
+      <div class="moon" aria-hidden="true">☾</div>
+      <div class="stars" aria-hidden="true">✦　·　✧　　✦　·　✧</div>
+      <p class="eyebrow">A LITTLE PLACE FOR YOUR WISHES</p>
+      <h1>یک آرزو برای دونیا</h1>
+      <p class="intro">برای شروع فصل تازه‌ی زندگی‌ام، یک آرزوی قشنگ برام بنویس...</p>
+
+      <form id="wish-form" class="wish-card">
+        <label for="sender">اسمت (اختیاری)</label>
+        <input id="sender" name="sender" maxlength="50" placeholder="مثلاً: یک دوست قدیمی">
+        <label for="message">آرزوی قشنگت برای من 💌</label>
+        <textarea id="message" name="message" maxlength="1000" rows="5" required placeholder="هر چیزی که دوست داری برام آرزو کنی..."></textarea>
+        <div class="form-bottom">
+          <small>آرزوت فقط برای دونیا قابل خوندنه ♡</small>
+          <button id="send-button" type="submit">فرستادن آرزو ✨</button>
+        </div>
+        <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="privacy-note">پیام‌ها خصوصی می‌مونن و در صفحه‌ی عمومی نمایش داده نمی‌شن.</p>
+    </section>
+
+    <section id="admin-view" class="admin-panel hidden">
+      <div class="admin-heading">
+        <p class="eyebrow">PRIVATE SPACE</p>
+        <h1>گوشه‌ی آرزوهای دونیا 🌙</h1>
+        <p class="intro">اینجا فقط خودت می‌تونی پیام‌هایی رو که برات فرستادن بخونی.</p>
+      </div>
+
+      <form id="login-form" class="wish-card login-card">
+        <h2>ورود خصوصی</h2>
+        <label for="email">ایمیل</label>
+        <input id="email" type="email" autocomplete="username" required placeholder="ایمیل حساب مدیر">
+        <label for="password">رمز عبور</label>
+        <input id="password" type="password" autocomplete="current-password" required placeholder="رمز عبور">
+        <button type="submit">ورود به آرزوها</button>
+        <p id="login-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div id="wishes-area" class="hidden">
+        <div class="wishes-toolbar">
+          <h2>آرزوهای رسیده <span id="wish-count" class="count">۰</span></h2>
+          <div class="toolbar-actions">
+            <button id="refresh-button" class="secondary-button" type="button">بروزرسانی</button>
+            <button id="logout-button" class="secondary-button" type="button">خروج</button>
+          </div>
+        </div>
+        <p id="admin-status" class="status" role="status" aria-live="polite"></p>
+        <div id="wishes-list" class="wishes-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>ساخته‌شده با کمی ماه، ستاره و آرزو برای دونیا <span>♡</span></footer>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
